@@ -24,7 +24,7 @@ def theta_phi(theta,phi,psi,x0,y0,z0):  # transform X0,y0,z0 to shower plane
 
 
 
-def fill(file,xcore,ycore,det):
+def fill(file,xcore,ycore,det,em_peak):
  
     '''
     - theta is the zenith angle of the event in radians
