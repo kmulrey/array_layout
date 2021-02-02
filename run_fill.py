@@ -20,6 +20,7 @@ parser.add_option("-z", "--zenithbin", default = "0", help = "zenithbin")
 (options, args) = parser.parse_args()
 energy = str(options.energybin)
 typeN = str(options.type)
+zenith = str(options.zenithbin)
 
 ########################################
 array_dir='/vol/astro2/users/kmulrey/array_layout/layout/'
