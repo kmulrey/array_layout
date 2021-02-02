@@ -5,14 +5,26 @@ import os
 import matplotlib.pyplot as plt
 import glob
 import sys
+from optparse import OptionParser
+
 sys.path.insert(1, 'array_layout/')
 import particle_function
 
 
+parser = OptionParser()
+parser.add_option("-e", "--energybin", default = "6", help = "energybin")
+
+
+(options, args) = parser.parse_args()
+energy = str(options.energybin)
+########################################
 array_dir='/vol/astro2/users/kmulrey/array_layout/layout/'
 geant_directory='/vol/astro3/lofar/sim/kmulrey/lora/flux/all_information2/'
 output_directory='/vol/astro7/lofar/kmulrey/array_design/'
+print(energybin)
 
+
+'''
 detectors=np.genfromtxt(array_dir+'test_layout.txt',skip_header=1)
 nDet=len(detectors)
 
@@ -32,3 +44,4 @@ files=glob.glob(geantDir+'*.geant')
 
 core=np.zeros([nTrials,2])
 event_info=np.zeros([nTrials,nDet,6])
+'''
