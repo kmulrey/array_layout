@@ -58,8 +58,8 @@ print(array_dir+det_file)
 
 files=glob.glob(geantDir+'*.geant')
 
-core=np.zeros([nTrials,2])
-event_info=np.zeros([nTrials,nDet,6])
+core=np.zeros([nTrials*nFiles,2])
+event_info=np.zeros([nTrials*nFiles,nDet,6])
 
 
 count=0
