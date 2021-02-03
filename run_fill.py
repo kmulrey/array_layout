@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import glob
 import sys
 from optparse import OptionParser
+import random
 
 sys.path.insert(1, 'array_layout/')
 import particle_function
