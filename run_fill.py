@@ -9,7 +9,7 @@ from optparse import OptionParser
 import random
 
 sys.path.insert(1, 'array_layout/')
-import particle_function
+import particle_function as pf
 
 
 parser = OptionParser()
