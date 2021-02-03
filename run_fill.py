@@ -52,11 +52,10 @@ nDet=len(detectors)
 
 
 geantDir=geant_directory+typeN+'/'+energy+'/'+zenith+'/geant/'
-print(geantDir)
-print(array_dir+det_file)
 
 
 files=glob.glob(geantDir+'*.geant')
+nFiles=len(files)
 
 core=np.zeros([nTrials*nFiles,2])
 event_info=np.zeros([nTrials*nFiles,nDet,6])
