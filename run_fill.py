@@ -13,14 +13,15 @@ import particle_function
 
 parser = OptionParser()
 parser.add_option("-e", "--energybin", default = "6", help = "energybin")
-parser.add_option("-t", "--type", default = "6", help = "type")
+parser.add_option("-t", "--type", default = "proton", help = "type")
 parser.add_option("-z", "--zenithbin", default = "0", help = "zenithbin")
-
+parser.add_option("-d", "--detectorfile", default = "test_layout.txt", help = "detector file")
 
 (options, args) = parser.parse_args()
 energy = str(options.energybin)
 typeN = str(options.type)
 zenith = str(options.zenithbin)
+det_file = str(options.detectorfile)
 
 ########################################
 array_dir='/vol/astro2/users/kmulrey/array_layout/layout/'
@@ -30,7 +31,7 @@ print(energy)
 
 
 
-detectors=np.genfromtxt(array_dir+'test_layout.txt',skip_header=1)
+detectors=np.genfromtxt(array_dir+det_file,skip_header=1)
 nDet=len(detectors)
 
 #typeN='proton'
@@ -41,6 +42,8 @@ nDet=len(detectors)
 
 geantDir=geant_directory+typeN+'/'+energy+'/'+zenith+'/geant/'
 print(geantDir)
+print(array_dir+det_file)
+
 '''
 thresh=1.0
 trigger_condition=3
