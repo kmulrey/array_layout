@@ -39,9 +39,7 @@ geant_directory='/vol/astro3/lofar/sim/kmulrey/lora/flux/all_information2/'
 output_directory='/vol/astro7/lofar/kmulrey/array_design/'
 em_peak=6.0
 
-print(energy)
 outdir=output_directory+det_file+'_'+str(int(maxR))+'/'
-import os
 if not os.path.exists(outdir):
     os.makedirs(outdir)
     
@@ -76,6 +74,6 @@ for f in np.arange(len(files)):
 
 info={'event_info':event_info,'core':core}
 
-PIK = "pickle.dat"
+PIK = outdir+type+'_'+energy+'_'+zenith+'.dat'
 with open(PIK, "wb") as f:
     pickle.dump(info, f)
