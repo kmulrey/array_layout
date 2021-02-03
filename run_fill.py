@@ -59,3 +59,23 @@ files=glob.glob(geantDir+'*.geant')
 
 core=np.zeros([nTrials,2])
 event_info=np.zeros([nTrials,nDet,6])
+
+
+count=0
+for f in np.arange(len(files)):
+    for i in np.arange(nTrials):
+        a=random.uniform(0, 1)*2.0*np.pi
+        r=random.uniform(0, 1)
+        xcore = np.sqrt(r*maxR**2) * np.cos(a)
+        ycore = np.sqrt(r*maxR**2) * np.sin(a)
+        hold,EMdep,radius,dep_data=pf.fill(files[f], xcore, ycore, detectors,em_peak)
+        event_info[count]=EMdep
+        core[count][0]=xcore
+        core[count][1]=ycore
+        count=count+1
+
+info={'event_info':event_info,'core':core}
+
+PIK = "pickle.dat"
+with open(PIK, "wb") as f:
+    pickle.dump(info, f)
