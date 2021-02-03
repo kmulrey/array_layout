@@ -74,6 +74,6 @@ for f in np.arange(len(files)):
 
 info={'event_info':event_info,'core':core}
 
-PIK = outdir+type+'_'+energy+'_'+zenith+'.dat'
+PIK = outdir+typeN+'_'+energy+'_'+zenith+'.dat'
 with open(PIK, "wb") as f:
     pickle.dump(info, f)
