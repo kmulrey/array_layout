@@ -75,6 +75,7 @@ def fill(file,xcore,ycore,det,em_peak):
 
 def return_probability(event_info,trigger_condition,thresh):
     nEvents=len(event_info)
+    trig_flag=np.zeros([len(cores)])
     count=0.0
     for i in np.arange(nEvents):
         trig=0
