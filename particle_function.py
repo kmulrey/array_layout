@@ -73,7 +73,7 @@ def fill(file,xcore,ycore,det,em_peak):
     return info, EM, rad,data
 
 
-def return_probability(event_info):
+def return_probability(event_info,trigger_condition,thresh):
     nEvents=len(event_info)
     count=0.0
     for i in np.arange(nEvents):
