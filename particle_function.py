@@ -71,3 +71,17 @@ def fill(file,xcore,ycore,det,em_peak):
 
 
     return info, EM, rad,data
+
+
+def return_probability(event_info):
+    nEvents=len(event_info)
+    count=0.0
+    for i in np.arange(nEvents):
+        trig=0
+        stn_trig=len(event_info[i].T[1][event_info[i].T[1]>=thresh])
+        if stn_trig>=trigger_condition:
+            trig=1
+            count=count+1.0
+            trig_flag[i]=1
+    prob=count/nEvents
+    return prob, trig_flag
