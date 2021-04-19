@@ -85,4 +85,4 @@ def return_probability(event_info,trigger_condition,thresh):
             count=count+1.0
             trig_flag[i]=1
     prob=count/nEvents
-    return prob, trig_flag
+    return prob, trig_flag, nEvents

@@ -9,6 +9,12 @@
 /* Begin PBXFileReference section */
 		412276D125C3632600B68E41 /* particle_function.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = particle_function.py; sourceTree = "<group>"; };
 		412276D225C48CAD00B68E41 /* run_fill.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = run_fill.py; sourceTree = "<group>"; };
+		41558B8B25CC79D600D1DFD6 /* run_prob.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = run_prob.py; sourceTree = "<group>"; };
+		41F9D2C9262DC99D00A54232 /* flux.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = flux.py; sourceTree = "<group>"; };
+		41F9D2CA262DC99D00A54232 /* compileEnergies.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = compileEnergies.py; sourceTree = "<group>"; };
+		41F9D2CB262DCF5500A54232 /* concatFiles.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = concatFiles.py; sourceTree = "<group>"; };
+		41F9D2CC262DD0AF00A54232 /* process.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = process.py; sourceTree = "<group>"; };
+		41F9D2CD262DD26A00A54232 /* get_probabilities.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = get_probabilities.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -17,6 +23,12 @@
 			children = (
 				412276D125C3632600B68E41 /* particle_function.py */,
 				412276D225C48CAD00B68E41 /* run_fill.py */,
+				41558B8B25CC79D600D1DFD6 /* run_prob.py */,
+				41F9D2CA262DC99D00A54232 /* compileEnergies.py */,
+				41F9D2CB262DCF5500A54232 /* concatFiles.py */,
+				41F9D2CC262DD0AF00A54232 /* process.py */,
+				41F9D2CD262DD26A00A54232 /* get_probabilities.py */,
+				41F9D2C9262DC99D00A54232 /* flux.py */,
 			);
 			sourceTree = "<group>";
 		};
